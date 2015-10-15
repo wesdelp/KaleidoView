@@ -1,0 +1,511 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		DE71A3501BCD8C9C0007FCC7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE71A34F1BCD8C9C0007FCC7 /* AppDelegate.swift */; };
+		DE71A3521BCD8C9C0007FCC7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE71A3511BCD8C9C0007FCC7 /* ViewController.swift */; };
+		DE71A3551BCD8C9C0007FCC7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DE71A3531BCD8C9C0007FCC7 /* Main.storyboard */; };
+		DE71A3571BCD8C9C0007FCC7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DE71A3561BCD8C9C0007FCC7 /* Assets.xcassets */; };
+		DE71A35A1BCD8C9C0007FCC7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DE71A3581BCD8C9C0007FCC7 /* LaunchScreen.storyboard */; };
+		DE71A3651BCD8C9D0007FCC7 /* KaleidoViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE71A3641BCD8C9D0007FCC7 /* KaleidoViewTests.swift */; };
+		DE71A3701BCD8C9D0007FCC7 /* KaleidoViewUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE71A36F1BCD8C9D0007FCC7 /* KaleidoViewUITests.swift */; };
+		DE71A3801BCD90840007FCC7 /* kaleidoDrawView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE71A37F1BCD90840007FCC7 /* kaleidoDrawView.swift */; settings = {ASSET_TAGS = (); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		DE71A3611BCD8C9D0007FCC7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DE71A3441BCD8C9C0007FCC7 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DE71A34B1BCD8C9C0007FCC7;
+			remoteInfo = KaleidoView;
+		};
+		DE71A36C1BCD8C9D0007FCC7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DE71A3441BCD8C9C0007FCC7 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DE71A34B1BCD8C9C0007FCC7;
+			remoteInfo = KaleidoView;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		DE71A34C1BCD8C9C0007FCC7 /* KaleidoView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KaleidoView.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		DE71A34F1BCD8C9C0007FCC7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		DE71A3511BCD8C9C0007FCC7 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		DE71A3541BCD8C9C0007FCC7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		DE71A3561BCD8C9C0007FCC7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		DE71A3591BCD8C9C0007FCC7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		DE71A35B1BCD8C9C0007FCC7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DE71A3601BCD8C9D0007FCC7 /* KaleidoViewTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KaleidoViewTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		DE71A3641BCD8C9D0007FCC7 /* KaleidoViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KaleidoViewTests.swift; sourceTree = "<group>"; };
+		DE71A3661BCD8C9D0007FCC7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DE71A36B1BCD8C9D0007FCC7 /* KaleidoViewUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KaleidoViewUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		DE71A36F1BCD8C9D0007FCC7 /* KaleidoViewUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KaleidoViewUITests.swift; sourceTree = "<group>"; };
+		DE71A3711BCD8C9D0007FCC7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DE71A37F1BCD90840007FCC7 /* kaleidoDrawView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = kaleidoDrawView.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		DE71A3491BCD8C9C0007FCC7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DE71A35D1BCD8C9D0007FCC7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DE71A3681BCD8C9D0007FCC7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		DE71A3431BCD8C9C0007FCC7 = {
+			isa = PBXGroup;
+			children = (
+				DE71A34E1BCD8C9C0007FCC7 /* KaleidoView */,
+				DE71A3631BCD8C9D0007FCC7 /* KaleidoViewTests */,
+				DE71A36E1BCD8C9D0007FCC7 /* KaleidoViewUITests */,
+				DE71A34D1BCD8C9C0007FCC7 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		DE71A34D1BCD8C9C0007FCC7 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				DE71A34C1BCD8C9C0007FCC7 /* KaleidoView.app */,
+				DE71A3601BCD8C9D0007FCC7 /* KaleidoViewTests.xctest */,
+				DE71A36B1BCD8C9D0007FCC7 /* KaleidoViewUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		DE71A34E1BCD8C9C0007FCC7 /* KaleidoView */ = {
+			isa = PBXGroup;
+			children = (
+				DE71A34F1BCD8C9C0007FCC7 /* AppDelegate.swift */,
+				DE71A3511BCD8C9C0007FCC7 /* ViewController.swift */,
+				DE71A37F1BCD90840007FCC7 /* kaleidoDrawView.swift */,
+				DE71A3531BCD8C9C0007FCC7 /* Main.storyboard */,
+				DE71A3561BCD8C9C0007FCC7 /* Assets.xcassets */,
+				DE71A3581BCD8C9C0007FCC7 /* LaunchScreen.storyboard */,
+				DE71A35B1BCD8C9C0007FCC7 /* Info.plist */,
+			);
+			path = KaleidoView;
+			sourceTree = "<group>";
+		};
+		DE71A3631BCD8C9D0007FCC7 /* KaleidoViewTests */ = {
+			isa = PBXGroup;
+			children = (
+				DE71A3641BCD8C9D0007FCC7 /* KaleidoViewTests.swift */,
+				DE71A3661BCD8C9D0007FCC7 /* Info.plist */,
+			);
+			path = KaleidoViewTests;
+			sourceTree = "<group>";
+		};
+		DE71A36E1BCD8C9D0007FCC7 /* KaleidoViewUITests */ = {
+			isa = PBXGroup;
+			children = (
+				DE71A36F1BCD8C9D0007FCC7 /* KaleidoViewUITests.swift */,
+				DE71A3711BCD8C9D0007FCC7 /* Info.plist */,
+			);
+			path = KaleidoViewUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		DE71A34B1BCD8C9C0007FCC7 /* KaleidoView */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DE71A3741BCD8C9D0007FCC7 /* Build configuration list for PBXNativeTarget "KaleidoView" */;
+			buildPhases = (
+				DE71A3481BCD8C9C0007FCC7 /* Sources */,
+				DE71A3491BCD8C9C0007FCC7 /* Frameworks */,
+				DE71A34A1BCD8C9C0007FCC7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = KaleidoView;
+			productName = KaleidoView;
+			productReference = DE71A34C1BCD8C9C0007FCC7 /* KaleidoView.app */;
+			productType = "com.apple.product-type.application";
+		};
+		DE71A35F1BCD8C9D0007FCC7 /* KaleidoViewTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DE71A3771BCD8C9D0007FCC7 /* Build configuration list for PBXNativeTarget "KaleidoViewTests" */;
+			buildPhases = (
+				DE71A35C1BCD8C9D0007FCC7 /* Sources */,
+				DE71A35D1BCD8C9D0007FCC7 /* Frameworks */,
+				DE71A35E1BCD8C9D0007FCC7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				DE71A3621BCD8C9D0007FCC7 /* PBXTargetDependency */,
+			);
+			name = KaleidoViewTests;
+			productName = KaleidoViewTests;
+			productReference = DE71A3601BCD8C9D0007FCC7 /* KaleidoViewTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		DE71A36A1BCD8C9D0007FCC7 /* KaleidoViewUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DE71A37A1BCD8C9D0007FCC7 /* Build configuration list for PBXNativeTarget "KaleidoViewUITests" */;
+			buildPhases = (
+				DE71A3671BCD8C9D0007FCC7 /* Sources */,
+				DE71A3681BCD8C9D0007FCC7 /* Frameworks */,
+				DE71A3691BCD8C9D0007FCC7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				DE71A36D1BCD8C9D0007FCC7 /* PBXTargetDependency */,
+			);
+			name = KaleidoViewUITests;
+			productName = KaleidoViewUITests;
+			productReference = DE71A36B1BCD8C9D0007FCC7 /* KaleidoViewUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		DE71A3441BCD8C9C0007FCC7 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0700;
+				ORGANIZATIONNAME = wesdelp;
+				TargetAttributes = {
+					DE71A34B1BCD8C9C0007FCC7 = {
+						CreatedOnToolsVersion = 7.0.1;
+						DevelopmentTeam = 2V6P875KB3;
+					};
+					DE71A35F1BCD8C9D0007FCC7 = {
+						CreatedOnToolsVersion = 7.0.1;
+						DevelopmentTeam = 2V6P875KB3;
+						TestTargetID = DE71A34B1BCD8C9C0007FCC7;
+					};
+					DE71A36A1BCD8C9D0007FCC7 = {
+						CreatedOnToolsVersion = 7.0.1;
+						DevelopmentTeam = 2V6P875KB3;
+						TestTargetID = DE71A34B1BCD8C9C0007FCC7;
+					};
+				};
+			};
+			buildConfigurationList = DE71A3471BCD8C9C0007FCC7 /* Build configuration list for PBXProject "KaleidoView" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = DE71A3431BCD8C9C0007FCC7;
+			productRefGroup = DE71A34D1BCD8C9C0007FCC7 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				DE71A34B1BCD8C9C0007FCC7 /* KaleidoView */,
+				DE71A35F1BCD8C9D0007FCC7 /* KaleidoViewTests */,
+				DE71A36A1BCD8C9D0007FCC7 /* KaleidoViewUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		DE71A34A1BCD8C9C0007FCC7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DE71A35A1BCD8C9C0007FCC7 /* LaunchScreen.storyboard in Resources */,
+				DE71A3571BCD8C9C0007FCC7 /* Assets.xcassets in Resources */,
+				DE71A3551BCD8C9C0007FCC7 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DE71A35E1BCD8C9D0007FCC7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DE71A3691BCD8C9D0007FCC7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		DE71A3481BCD8C9C0007FCC7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DE71A3521BCD8C9C0007FCC7 /* ViewController.swift in Sources */,
+				DE71A3801BCD90840007FCC7 /* kaleidoDrawView.swift in Sources */,
+				DE71A3501BCD8C9C0007FCC7 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DE71A35C1BCD8C9D0007FCC7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DE71A3651BCD8C9D0007FCC7 /* KaleidoViewTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DE71A3671BCD8C9D0007FCC7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DE71A3701BCD8C9D0007FCC7 /* KaleidoViewUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		DE71A3621BCD8C9D0007FCC7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DE71A34B1BCD8C9C0007FCC7 /* KaleidoView */;
+			targetProxy = DE71A3611BCD8C9D0007FCC7 /* PBXContainerItemProxy */;
+		};
+		DE71A36D1BCD8C9D0007FCC7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DE71A34B1BCD8C9C0007FCC7 /* KaleidoView */;
+			targetProxy = DE71A36C1BCD8C9D0007FCC7 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		DE71A3531BCD8C9C0007FCC7 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DE71A3541BCD8C9C0007FCC7 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		DE71A3581BCD8C9C0007FCC7 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DE71A3591BCD8C9C0007FCC7 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		DE71A3721BCD8C9D0007FCC7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		DE71A3731BCD8C9D0007FCC7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		DE71A3751BCD8C9D0007FCC7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = KaleidoView/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.wesdelp.KaleidoView;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		DE71A3761BCD8C9D0007FCC7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = KaleidoView/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.wesdelp.KaleidoView;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		DE71A3781BCD8C9D0007FCC7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = KaleidoViewTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.wesdelp.KaleidoViewTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/KaleidoView.app/KaleidoView";
+			};
+			name = Debug;
+		};
+		DE71A3791BCD8C9D0007FCC7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = KaleidoViewTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.wesdelp.KaleidoViewTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/KaleidoView.app/KaleidoView";
+			};
+			name = Release;
+		};
+		DE71A37B1BCD8C9D0007FCC7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = KaleidoViewUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.wesdelp.KaleidoViewUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = KaleidoView;
+				USES_XCTRUNNER = YES;
+			};
+			name = Debug;
+		};
+		DE71A37C1BCD8C9D0007FCC7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = KaleidoViewUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.wesdelp.KaleidoViewUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = KaleidoView;
+				USES_XCTRUNNER = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		DE71A3471BCD8C9C0007FCC7 /* Build configuration list for PBXProject "KaleidoView" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DE71A3721BCD8C9D0007FCC7 /* Debug */,
+				DE71A3731BCD8C9D0007FCC7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DE71A3741BCD8C9D0007FCC7 /* Build configuration list for PBXNativeTarget "KaleidoView" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DE71A3751BCD8C9D0007FCC7 /* Debug */,
+				DE71A3761BCD8C9D0007FCC7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		DE71A3771BCD8C9D0007FCC7 /* Build configuration list for PBXNativeTarget "KaleidoViewTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DE71A3781BCD8C9D0007FCC7 /* Debug */,
+				DE71A3791BCD8C9D0007FCC7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		DE71A37A1BCD8C9D0007FCC7 /* Build configuration list for PBXNativeTarget "KaleidoViewUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DE71A37B1BCD8C9D0007FCC7 /* Debug */,
+				DE71A37C1BCD8C9D0007FCC7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = DE71A3441BCD8C9C0007FCC7 /* Project object */;
+}
