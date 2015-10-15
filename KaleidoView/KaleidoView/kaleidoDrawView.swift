@@ -59,5 +59,9 @@ class kaleidoDrawView: UIView {
         // Generate Random Rect Size
         let rectWidth = getRandomFromFloatMin(minRectWidth, thruFloatMax:maxRectWidth)
         let rectHeight =  getRandomFromFloatMax(minRectHeight, thruFloatMax:maxRectHeight)
+        
+        // Get Random Centroid for 4 Rects
+        let centroidX = getRandomFromFloatMin(borderLineWidth, thruFloatMax: viewWidth - rectWidth - borderLineWidth)
+        let centroidY
     }
 }
