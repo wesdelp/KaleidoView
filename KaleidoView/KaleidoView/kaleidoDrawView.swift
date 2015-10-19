@@ -13,9 +13,9 @@ class kaleidoDrawView: UIView {
     var rectWidth    :CGFloat = 10.0 // Placeholder value
     var rectHeight   :CGFloat = 20.0 // Placeholder value
     var minRectWidth :CGFloat = 5.0  // Bounds for random
-    var maxRectWidth :CGFloat = 80.0 // ...
+    var maxRectWidth :CGFloat = 30.0 // ...
     var minRectHeight:CGFloat = 5.0  // ...
-    var maxRectHeight:CGFloat = 80.0 // ...
+    var maxRectHeight:CGFloat = 30.0 // ...
     
     // Rectangle Border stroke width
     var borderLineWidth:CGFloat = 5.0
@@ -28,7 +28,7 @@ class kaleidoDrawView: UIView {
     var useAlpha         = false
     
     // Draw Speed
-    var drawDelay:NSTimeInterval = 0.5
+    var drawDelay:NSTimeInterval = 0.1
     
     // Layer to retain
     var drawLayer:CGLayerRef? = nil
@@ -42,7 +42,7 @@ class kaleidoDrawView: UIView {
         
         if (drawLayer == nil) {
             // Create Layer
-            let size = CGSizeMake(self.bounds.size.width, self.bounds.height)
+            let size = CGSizeMake(self.bounds.size.width, self.bounds.size.height)
             drawLayer = CGLayerCreateWithContext(context, size, nil)
         }
         
@@ -64,21 +64,33 @@ class kaleidoDrawView: UIView {
         let rectHeight = getRandomFromFloatMin(minRectHeight, thruFloatMax:maxRectHeight)
         
         // Get Random Centroid for 4 Rects
-        let centroidX = getRandomFromFloatMin(borderLineWidth,
-                        thruFloatMax: viewWidth - rectWidth - borderLineWidth)
-        let centroidY = getRandomFromFloatMin(borderLineWidth,
-                        thruFloatMax: viewHeight - rectHeight - borderLineWidth)
+        let centroidX = viewWidth/2
+        print("X=\(centroidX)")
+                        //getRandomFromFloatMin(borderLineWidth,
+                        //thruFloatMax: viewWidth - rectWidth - borderLineWidth)
+        let centroidY = viewHeight/2
+        print("Y=\(centroidY)")
+                        //getRandomFromFloatMin(borderLineWidth,
+                        //thruFloatMax: viewHeight - rectHeight - borderLineWidth)
         
         let offsetX = getRandomFromFloatMin(borderLineWidth,
-                      thruFloatMax: viewWidth - rectWidth - borderLineWidth - centroidX)
+                              thruFloatMax: viewWidth - rectWidth - borderLineWidth - centroidX)
         let offsetY = getRandomFromFloatMin(borderLineWidth,
-                      thruFloatMax: viewHeight - rectHeight - borderLineWidth - centroidY)
+                              thruFloatMax: viewHeight - rectHeight - borderLineWidth - centroidY)
+        
+        let adjustOriginX = rectWidth/2
+        
+        let adjustOriginY = rectHeight/2
         
         let rectLocations = [
-                            CGRect(x:centroidX + offsetX, y:centroidY + offsetY, width:rectWidth, height:rectHeight),
-                            CGRect(x:centroidX - offsetX, y:centroidY - offsetY, width:rectWidth, height:rectHeight),
-                            CGRect(x:centroidX + offsetX, y:centroidY - offsetY, width:rectWidth, height:rectHeight),
-                            CGRect(x:centroidX - offsetX, y:centroidY + offsetY, width:rectWidth, height:rectHeight)
+                            CGRect(x:centroidX + offsetX - adjustOriginX, y:centroidY + offsetY - adjustOriginY,
+                                width:rectWidth, height:rectHeight),
+                            CGRect(x:centroidX - offsetX - adjustOriginX, y:centroidY - offsetY - adjustOriginY,
+                                width:rectWidth, height:rectHeight),
+                            CGRect(x:centroidX + offsetX - adjustOriginX, y:centroidY - offsetY - adjustOriginY,
+                                width:rectWidth, height:rectHeight),
+                            CGRect(x:centroidX - offsetX - adjustOriginX, y:centroidY + offsetY - adjustOriginY,
+                                width:rectWidth, height:rectHeight)
                             ]
         
         drawRectangles(rectLocations, withColor:color)
@@ -145,8 +157,7 @@ class kaleidoDrawView: UIView {
         return randomInRange
     }
     
-    func getRandomFromFloatMin(min: CGFloat, thruFloatMax max: CGFloat)-> CGFloat
-    {
+    func getRandomFromFloatMin(min: CGFloat, thruFloatMax max: CGFloat) -> CGFloat {
         // Three decimal places
         let accuracy : CGFloat = 1000.0
         
