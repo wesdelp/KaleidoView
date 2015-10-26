@@ -12,13 +12,13 @@ class kaleidoDrawView: UIView {
     // Rectangle Bounds
     var rectWidth    :CGFloat = 10.0 // Placeholder value
     var rectHeight   :CGFloat = 20.0 // Placeholder value
-    var minRectWidth :CGFloat = 5.0  // Bounds for random
+    var minRectWidth :CGFloat = 10.0 // Bounds for random
     var maxRectWidth :CGFloat = 30.0 // ...
-    var minRectHeight:CGFloat = 5.0  // ...
+    var minRectHeight:CGFloat = 10.0 // ...
     var maxRectHeight:CGFloat = 30.0 // ...
     
     // Rectangle Border stroke width
-    var borderLineWidth:CGFloat = 5.0
+    var borderLineWidth:CGFloat = 0.0
     
     // Rectangle Color Bounds
     var minColor:CGFloat = 0.1
@@ -33,7 +33,7 @@ class kaleidoDrawView: UIView {
     // Layer to retain
     var drawLayer:CGLayerRef? = nil
     
-    // Timer to stop and stop
+    // Timer to start and stop
     var drawTimer:NSTimer? = nil
     
     override func drawRect(rect:CGRect) {
@@ -46,6 +46,7 @@ class kaleidoDrawView: UIView {
             drawLayer = CGLayerCreateWithContext(context, size, nil)
         }
         
+        // Draw rect to current layer
         self.drawToLayer()
         
         CGContextDrawLayerInRect(context, self.bounds, drawLayer)
@@ -63,36 +64,32 @@ class kaleidoDrawView: UIView {
         let rectWidth = getRandomFromFloatMin(minRectWidth, thruFloatMax:maxRectWidth)
         let rectHeight = getRandomFromFloatMin(minRectHeight, thruFloatMax:maxRectHeight)
         
-        // Get Random Centroid for 4 Rects
+        // Create centroid at center of screen
         let centroidX = viewWidth/2
-        print("X=\(centroidX)")
-                        //getRandomFromFloatMin(borderLineWidth,
-                        //thruFloatMax: viewWidth - rectWidth - borderLineWidth)
         let centroidY = viewHeight/2
-        print("Y=\(centroidY)")
-                        //getRandomFromFloatMin(borderLineWidth,
-                        //thruFloatMax: viewHeight - rectHeight - borderLineWidth)
         
+        // Get random x and y to offset from centroid
         let offsetX = getRandomFromFloatMin(borderLineWidth,
                               thruFloatMax: viewWidth - rectWidth - borderLineWidth - centroidX)
         let offsetY = getRandomFromFloatMin(borderLineWidth,
                               thruFloatMax: viewHeight - rectHeight - borderLineWidth - centroidY)
         
-        let adjustOriginX = rectWidth/2
-        
-        let adjustOriginY = rectHeight/2
-        
+        // CG Rect draws by placing it's origin at the bottom left corner and draws to the top right.
+        // This causes the whole view to veer towards the right by the rect width and up by the rect height.
+        // Adjustments are made at (-x,y), (-x,-y), and (x,-y) to account for this
+        // Result is an array of the 4 rect locations, mirrored across the x and y axis
         let rectLocations = [
-                            CGRect(x:centroidX + offsetX - adjustOriginX, y:centroidY + offsetY - adjustOriginY,
+                            CGRect(x:centroidX + offsetX, y:centroidY + offsetY,
                                 width:rectWidth, height:rectHeight),
-                            CGRect(x:centroidX - offsetX - adjustOriginX, y:centroidY - offsetY - adjustOriginY,
+                            CGRect(x:centroidX - offsetX - rectWidth, y:centroidY - offsetY - rectHeight,
                                 width:rectWidth, height:rectHeight),
-                            CGRect(x:centroidX + offsetX - adjustOriginX, y:centroidY - offsetY - adjustOriginY,
+                            CGRect(x:centroidX + offsetX, y:centroidY - offsetY - rectHeight,
                                 width:rectWidth, height:rectHeight),
-                            CGRect(x:centroidX - offsetX - adjustOriginX, y:centroidY + offsetY - adjustOriginY,
+                            CGRect(x:centroidX - offsetX - rectWidth, y:centroidY + offsetY,
                                 width:rectWidth, height:rectHeight)
                             ]
         
+        // Send array of rects to be drawn along with color
         drawRectangles(rectLocations, withColor:color)
     }
     
@@ -110,6 +107,7 @@ class kaleidoDrawView: UIView {
         CGContextSetRGBFillColor(layerContext, red, green, blue, alpha)
         CGContextSetRGBStrokeColor(layerContext, red, green, blue, alpha)
     
+        // Iterate through array of rects and draw
         for rect in rectLocations {
             CGContextAddRect(layerContext, rect)
             CGContextDrawPath(layerContext, .Fill)
@@ -164,7 +162,7 @@ class kaleidoDrawView: UIView {
         let scaledMin : CGFloat = min * accuracy
         let scaledMax : CGFloat = max * accuracy
         
-        // arc4random returns unsigned 64 bit value, so divide by 2
+        // divide unsigned 64-bit by 2
         let randomNum = Int(arc4random() / 2)
         
         // Put the value in the specified range of values
